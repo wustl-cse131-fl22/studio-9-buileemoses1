@@ -18,10 +18,31 @@ public class NameToHeight {
 	 * contain a specified name.
 	 */
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-
-		// FIXME
-		throw new NotYetImplementedException();
-
+		
+		boolean stop = false;
+		Scanner in = new Scanner(System.in); 
+		 Map <String, Integer> yuppo = new HashMap<String, Integer>();
+		 yuppo.put("Ethan", 6); 
+		 yuppo.put("Q", 6); 
+		 yuppo.put("Priscilla", 5); 
+		 
+		 while (!stop) {
+			 String search = in.next();
+			 if (search.equals("quit")) {
+				 stop = true;
+			}
+			 else {
+				 if (yuppo.get(search) == null) {
+					 System.out.println("Name not found.");
+				 }
+				 else {
+					 int result = yuppo.get(search);
+					 System.out.println(search + " " + result);
+				 }
+			 }
+			 
+		 }
+		 
 	}
 }
+	
